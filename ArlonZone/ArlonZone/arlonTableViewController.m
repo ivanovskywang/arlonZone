@@ -58,6 +58,7 @@
         [self.tableView reloadData];
     };
     [self.navigationController pushViewController:addIVC animated:YES];
+    NSLog(@"%@",NSHomeDirectory());
 }
 
 #pragma mark - Table view data source

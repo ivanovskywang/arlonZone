@@ -77,6 +77,38 @@
 }
 
 
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL*)url
+{
+    // 接受传过来的参数
+    NSString *text = [[url host] stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Open by Scheme"
+                                                        message:text
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OjbK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+    return YES;
+}
+
+// 被启动的APP处理传过来的参数
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    NSLog(@"sourceApplication: %@", sourceApplication);
+    NSLog(@"URL scheme:%@", [url scheme]);
+    NSLog(@"URL query: %@", [url query]);
+    
+    // 接受传过来的参数
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"接收到参数"
+                                                        message:[url query]
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OjbK"
+                                              otherButtonTitles:nil];
+    [alertView show];
+    
+    return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
