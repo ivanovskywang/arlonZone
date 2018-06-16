@@ -1,0 +1,618 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9D9E52B320D36A560078A1A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52B220D36A560078A1A8 /* AppDelegate.m */; };
+		9D9E52B620D36A560078A1A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52B520D36A560078A1A8 /* ViewController.m */; };
+		9D9E52B920D36A560078A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E52B720D36A560078A1A8 /* Main.storyboard */; };
+		9D9E52BB20D36A570078A1A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E52BA20D36A570078A1A8 /* Assets.xcassets */; };
+		9D9E52BE20D36A570078A1A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E52BC20D36A570078A1A8 /* LaunchScreen.storyboard */; };
+		9D9E52C120D36A570078A1A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52C020D36A570078A1A8 /* main.m */; };
+		9D9E52CB20D36A570078A1A8 /* ArlonZoneTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52CA20D36A570078A1A8 /* ArlonZoneTests.m */; };
+		9D9E52D620D36A570078A1A8 /* ArlonZoneUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52D520D36A570078A1A8 /* ArlonZoneUITests.m */; };
+		9D9E52E520D36C310078A1A8 /* arlonCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52E420D36C310078A1A8 /* arlonCollectionViewController.m */; };
+		9D9E52E820D36CA60078A1A8 /* arlonCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52E720D36CA60078A1A8 /* arlonCollectionCell.m */; };
+		9D9E52EB20D36D1B0078A1A8 /* arlonDownload.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52EA20D36D1B0078A1A8 /* arlonDownload.m */; };
+		9D9E52EE20D36FAC0078A1A8 /* arlonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52ED20D36FAC0078A1A8 /* arlonTableViewController.m */; };
+		9D9E52F420D3719C0078A1A8 /* arlonTableItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52F320D3719C0078A1A8 /* arlonTableItem.m */; };
+		9D9E52F720D39FC20078A1A8 /* addItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52F620D39FC20078A1A8 /* addItemViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9D9E52C720D36A570078A1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D9E52A620D36A560078A1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9E52AD20D36A560078A1A8;
+			remoteInfo = ArlonZone;
+		};
+		9D9E52D220D36A570078A1A8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9D9E52A620D36A560078A1A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D9E52AD20D36A560078A1A8;
+			remoteInfo = ArlonZone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		9D9E52AE20D36A560078A1A8 /* ArlonZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArlonZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9E52B120D36A560078A1A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9D9E52B220D36A560078A1A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9D9E52B420D36A560078A1A8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9D9E52B520D36A560078A1A8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		9D9E52B820D36A560078A1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9D9E52BA20D36A570078A1A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9D9E52BD20D36A570078A1A8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9D9E52BF20D36A570078A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9E52C020D36A570078A1A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9D9E52C620D36A570078A1A8 /* ArlonZoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArlonZoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9E52CA20D36A570078A1A8 /* ArlonZoneTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArlonZoneTests.m; sourceTree = "<group>"; };
+		9D9E52CC20D36A570078A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9E52D120D36A570078A1A8 /* ArlonZoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArlonZoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D9E52D520D36A570078A1A8 /* ArlonZoneUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArlonZoneUITests.m; sourceTree = "<group>"; };
+		9D9E52D720D36A570078A1A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9D9E52E320D36C310078A1A8 /* arlonCollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonCollectionViewController.h; sourceTree = "<group>"; };
+		9D9E52E420D36C310078A1A8 /* arlonCollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonCollectionViewController.m; sourceTree = "<group>"; };
+		9D9E52E620D36CA60078A1A8 /* arlonCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonCollectionCell.h; sourceTree = "<group>"; };
+		9D9E52E720D36CA60078A1A8 /* arlonCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonCollectionCell.m; sourceTree = "<group>"; };
+		9D9E52E920D36D1B0078A1A8 /* arlonDownload.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonDownload.h; sourceTree = "<group>"; };
+		9D9E52EA20D36D1B0078A1A8 /* arlonDownload.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonDownload.m; sourceTree = "<group>"; };
+		9D9E52EC20D36FAC0078A1A8 /* arlonTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonTableViewController.h; sourceTree = "<group>"; };
+		9D9E52ED20D36FAC0078A1A8 /* arlonTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonTableViewController.m; sourceTree = "<group>"; };
+		9D9E52F220D3719C0078A1A8 /* arlonTableItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonTableItem.h; sourceTree = "<group>"; };
+		9D9E52F320D3719C0078A1A8 /* arlonTableItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonTableItem.m; sourceTree = "<group>"; };
+		9D9E52F520D39FC20078A1A8 /* addItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = addItemViewController.h; sourceTree = "<group>"; };
+		9D9E52F620D39FC20078A1A8 /* addItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = addItemViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9D9E52AB20D36A560078A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52C320D36A570078A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52CE20D36A570078A1A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D9E52A520D36A560078A1A8 = {
+			isa = PBXGroup;
+			children = (
+				9D9E52B020D36A560078A1A8 /* ArlonZone */,
+				9D9E52C920D36A570078A1A8 /* ArlonZoneTests */,
+				9D9E52D420D36A570078A1A8 /* ArlonZoneUITests */,
+				9D9E52AF20D36A560078A1A8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		9D9E52AF20D36A560078A1A8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E52AE20D36A560078A1A8 /* ArlonZone.app */,
+				9D9E52C620D36A570078A1A8 /* ArlonZoneTests.xctest */,
+				9D9E52D120D36A570078A1A8 /* ArlonZoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9D9E52B020D36A560078A1A8 /* ArlonZone */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E52B120D36A560078A1A8 /* AppDelegate.h */,
+				9D9E52B220D36A560078A1A8 /* AppDelegate.m */,
+				9D9E52EC20D36FAC0078A1A8 /* arlonTableViewController.h */,
+				9D9E52ED20D36FAC0078A1A8 /* arlonTableViewController.m */,
+				9D9E52F520D39FC20078A1A8 /* addItemViewController.h */,
+				9D9E52F620D39FC20078A1A8 /* addItemViewController.m */,
+				9D9E52F220D3719C0078A1A8 /* arlonTableItem.h */,
+				9D9E52F320D3719C0078A1A8 /* arlonTableItem.m */,
+				9D9E52B420D36A560078A1A8 /* ViewController.h */,
+				9D9E52B520D36A560078A1A8 /* ViewController.m */,
+				9D9E52E620D36CA60078A1A8 /* arlonCollectionCell.h */,
+				9D9E52E720D36CA60078A1A8 /* arlonCollectionCell.m */,
+				9D9E52E920D36D1B0078A1A8 /* arlonDownload.h */,
+				9D9E52EA20D36D1B0078A1A8 /* arlonDownload.m */,
+				9D9E52E320D36C310078A1A8 /* arlonCollectionViewController.h */,
+				9D9E52E420D36C310078A1A8 /* arlonCollectionViewController.m */,
+				9D9E52B720D36A560078A1A8 /* Main.storyboard */,
+				9D9E52BA20D36A570078A1A8 /* Assets.xcassets */,
+				9D9E52BC20D36A570078A1A8 /* LaunchScreen.storyboard */,
+				9D9E52BF20D36A570078A1A8 /* Info.plist */,
+				9D9E52C020D36A570078A1A8 /* main.m */,
+			);
+			path = ArlonZone;
+			sourceTree = "<group>";
+		};
+		9D9E52C920D36A570078A1A8 /* ArlonZoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E52CA20D36A570078A1A8 /* ArlonZoneTests.m */,
+				9D9E52CC20D36A570078A1A8 /* Info.plist */,
+			);
+			path = ArlonZoneTests;
+			sourceTree = "<group>";
+		};
+		9D9E52D420D36A570078A1A8 /* ArlonZoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9D9E52D520D36A570078A1A8 /* ArlonZoneUITests.m */,
+				9D9E52D720D36A570078A1A8 /* Info.plist */,
+			);
+			path = ArlonZoneUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9D9E52AD20D36A560078A1A8 /* ArlonZone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9E52DA20D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZone" */;
+			buildPhases = (
+				9D9E52AA20D36A560078A1A8 /* Sources */,
+				9D9E52AB20D36A560078A1A8 /* Frameworks */,
+				9D9E52AC20D36A560078A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ArlonZone;
+			productName = ArlonZone;
+			productReference = 9D9E52AE20D36A560078A1A8 /* ArlonZone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9D9E52C520D36A570078A1A8 /* ArlonZoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9E52DD20D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZoneTests" */;
+			buildPhases = (
+				9D9E52C220D36A570078A1A8 /* Sources */,
+				9D9E52C320D36A570078A1A8 /* Frameworks */,
+				9D9E52C420D36A570078A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9E52C820D36A570078A1A8 /* PBXTargetDependency */,
+			);
+			name = ArlonZoneTests;
+			productName = ArlonZoneTests;
+			productReference = 9D9E52C620D36A570078A1A8 /* ArlonZoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9D9E52D020D36A570078A1A8 /* ArlonZoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9D9E52E020D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZoneUITests" */;
+			buildPhases = (
+				9D9E52CD20D36A570078A1A8 /* Sources */,
+				9D9E52CE20D36A570078A1A8 /* Frameworks */,
+				9D9E52CF20D36A570078A1A8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9D9E52D320D36A570078A1A8 /* PBXTargetDependency */,
+			);
+			name = ArlonZoneUITests;
+			productName = ArlonZoneUITests;
+			productReference = 9D9E52D120D36A570078A1A8 /* ArlonZoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9D9E52A620D36A560078A1A8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = Arlongwang;
+				TargetAttributes = {
+					9D9E52AD20D36A560078A1A8 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+					9D9E52C520D36A570078A1A8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 9D9E52AD20D36A560078A1A8;
+					};
+					9D9E52D020D36A570078A1A8 = {
+						CreatedOnToolsVersion = 9.3;
+						TestTargetID = 9D9E52AD20D36A560078A1A8;
+					};
+				};
+			};
+			buildConfigurationList = 9D9E52A920D36A560078A1A8 /* Build configuration list for PBXProject "ArlonZone" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9D9E52A520D36A560078A1A8;
+			productRefGroup = 9D9E52AF20D36A560078A1A8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9D9E52AD20D36A560078A1A8 /* ArlonZone */,
+				9D9E52C520D36A570078A1A8 /* ArlonZoneTests */,
+				9D9E52D020D36A570078A1A8 /* ArlonZoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9D9E52AC20D36A560078A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9E52BE20D36A570078A1A8 /* LaunchScreen.storyboard in Resources */,
+				9D9E52BB20D36A570078A1A8 /* Assets.xcassets in Resources */,
+				9D9E52B920D36A560078A1A8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52C420D36A570078A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52CF20D36A570078A1A8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9D9E52AA20D36A560078A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9E52B620D36A560078A1A8 /* ViewController.m in Sources */,
+				9D9E52E820D36CA60078A1A8 /* arlonCollectionCell.m in Sources */,
+				9D9E52F420D3719C0078A1A8 /* arlonTableItem.m in Sources */,
+				9D9E52EB20D36D1B0078A1A8 /* arlonDownload.m in Sources */,
+				9D9E52E520D36C310078A1A8 /* arlonCollectionViewController.m in Sources */,
+				9D9E52C120D36A570078A1A8 /* main.m in Sources */,
+				9D9E52F720D39FC20078A1A8 /* addItemViewController.m in Sources */,
+				9D9E52EE20D36FAC0078A1A8 /* arlonTableViewController.m in Sources */,
+				9D9E52B320D36A560078A1A8 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52C220D36A570078A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9E52CB20D36A570078A1A8 /* ArlonZoneTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9D9E52CD20D36A570078A1A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D9E52D620D36A570078A1A8 /* ArlonZoneUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9D9E52C820D36A570078A1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9E52AD20D36A560078A1A8 /* ArlonZone */;
+			targetProxy = 9D9E52C720D36A570078A1A8 /* PBXContainerItemProxy */;
+		};
+		9D9E52D320D36A570078A1A8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D9E52AD20D36A560078A1A8 /* ArlonZone */;
+			targetProxy = 9D9E52D220D36A570078A1A8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9D9E52B720D36A560078A1A8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D9E52B820D36A560078A1A8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9D9E52BC20D36A570078A1A8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9D9E52BD20D36A570078A1A8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9D9E52D820D36A570078A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		9D9E52D920D36A570078A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D9E52DB20D36A570078A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9D9E52DC20D36A570078A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9D9E52DE20D36A570078A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArlonZone.app/ArlonZone";
+			};
+			name = Debug;
+		};
+		9D9E52DF20D36A570078A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArlonZone.app/ArlonZone";
+			};
+			name = Release;
+		};
+		9D9E52E120D36A570078A1A8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArlonZone;
+			};
+			name = Debug;
+		};
+		9D9E52E220D36A570078A1A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6W285SNT84;
+				INFOPLIST_FILE = ArlonZoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Arlong.tencent.ArlonZoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ArlonZone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9D9E52A920D36A560078A1A8 /* Build configuration list for PBXProject "ArlonZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9E52D820D36A570078A1A8 /* Debug */,
+				9D9E52D920D36A570078A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9E52DA20D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9E52DB20D36A570078A1A8 /* Debug */,
+				9D9E52DC20D36A570078A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9E52DD20D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9E52DE20D36A570078A1A8 /* Debug */,
+				9D9E52DF20D36A570078A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9D9E52E020D36A570078A1A8 /* Build configuration list for PBXNativeTarget "ArlonZoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D9E52E120D36A570078A1A8 /* Debug */,
+				9D9E52E220D36A570078A1A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9D9E52A620D36A560078A1A8 /* Project object */;
+}
