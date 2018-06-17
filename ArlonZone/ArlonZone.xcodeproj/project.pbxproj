@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D44891B20D64D260014224F /* arlonLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44891A20D64D260014224F /* arlonLoginViewController.m */; };
+		9D44891E20D653480014224F /* mainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44891D20D653480014224F /* mainWindow.m */; };
 		9D9E52B320D36A560078A1A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52B220D36A560078A1A8 /* AppDelegate.m */; };
 		9D9E52B620D36A560078A1A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D9E52B520D36A560078A1A8 /* ViewController.m */; };
 		9D9E52B920D36A560078A1A8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D9E52B720D36A560078A1A8 /* Main.storyboard */; };
@@ -41,6 +43,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D44891920D64D260014224F /* arlonLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonLoginViewController.h; sourceTree = "<group>"; };
+		9D44891A20D64D260014224F /* arlonLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonLoginViewController.m; sourceTree = "<group>"; };
+		9D44891C20D653480014224F /* mainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainWindow.h; sourceTree = "<group>"; };
+		9D44891D20D653480014224F /* mainWindow.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = mainWindow.m; sourceTree = "<group>"; };
 		9D9E52AE20D36A560078A1A8 /* ArlonZone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArlonZone.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D9E52B120D36A560078A1A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9D9E52B220D36A560078A1A8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 				9D9E52E720D36CA60078A1A8 /* arlonCollectionCell.m */,
 				9D9E52E920D36D1B0078A1A8 /* arlonDownload.h */,
 				9D9E52EA20D36D1B0078A1A8 /* arlonDownload.m */,
+				9D44891920D64D260014224F /* arlonLoginViewController.h */,
+				9D44891A20D64D260014224F /* arlonLoginViewController.m */,
+				9D44891C20D653480014224F /* mainWindow.h */,
+				9D44891D20D653480014224F /* mainWindow.m */,
 				9D9E52E320D36C310078A1A8 /* arlonCollectionViewController.h */,
 				9D9E52E420D36C310078A1A8 /* arlonCollectionViewController.m */,
 				9D9E52B720D36A560078A1A8 /* Main.storyboard */,
@@ -298,9 +308,11 @@
 				9D9E52EB20D36D1B0078A1A8 /* arlonDownload.m in Sources */,
 				9D9E52E520D36C310078A1A8 /* arlonCollectionViewController.m in Sources */,
 				9D9E52C120D36A570078A1A8 /* main.m in Sources */,
+				9D44891B20D64D260014224F /* arlonLoginViewController.m in Sources */,
 				9D9E52F720D39FC20078A1A8 /* addItemViewController.m in Sources */,
 				9D9E52EE20D36FAC0078A1A8 /* arlonTableViewController.m in Sources */,
 				9D9E52B320D36A560078A1A8 /* AppDelegate.m in Sources */,
+				9D44891E20D653480014224F /* mainWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

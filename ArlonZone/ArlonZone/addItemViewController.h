@@ -13,6 +13,6 @@
 @interface addItemViewController : UIViewController
 
 @property arlonTableItem *addItem;
- @property (nonatomic, strong) void(^saveBlock)(arlonTableItem *);
+@property (nonatomic, strong) void(^saveBlock)(arlonTableItem *);
 
 @end

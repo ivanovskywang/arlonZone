@@ -1,8 +1,8 @@
 //
-//  AppDelegate.h
+//  UIViewController+mainWindow.h
 //  ArlonZone
 //
-//  Created by Arlongwang on 2018/6/15.
+//  Created by Arlongwang on 2018/6/17.
 //  Copyright © 2018年 Arlongwang. All rights reserved.
 //
 
@@ -12,10 +12,6 @@
 #import "addItemViewController.h"
 #import "arlonLoginViewController.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (strong, nonatomic) UIWindow *window;
-
+@interface  mainWindow:UIViewController
 
 @end
-

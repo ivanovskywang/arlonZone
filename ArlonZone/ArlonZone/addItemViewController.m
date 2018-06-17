@@ -17,17 +17,6 @@
 
 @implementation addItemViewController
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if(sender != self.doneButton)
-        return;
-    if(self.textField.text.length > 0)
-    {
-        self.addItem = [[arlonTableItem alloc] init];
-        self.addItem.itemName = self.textField.text;
-        self.addItem.checked = NO;
-    }
-}
-
 - (void)viewDidLoad {
     [super viewDidLoad];    
     
@@ -38,9 +27,6 @@
     [self addinputTextField];
     [self addLabel];
     [self addArlonButton];
-    
-
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -72,7 +58,7 @@
     //设置标签背景颜色为透明色
     mylabel.backgroundColor=[UIColor clearColor];
     //设置标签内容和字体颜色
-    mylabel.text=@"input⬇️:";
+    mylabel.text=@"input:";
     mylabel.textColor=[UIColor redColor];
     
     //显示行数

@@ -17,6 +17,57 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [self notificationHandler];
+    
+    [self redirectNSlogToDocumentFolder];
+    arlonLoginViewController * loginVC = [[arlonLoginViewController alloc]init];
+    UINavigationController *loginNav = [[UINavigationController alloc]initWithRootViewController:loginVC];
+
+    
+    // 设置窗口的跟控制器
+    UITabBarController * tabbarVC = [[UITabBarController alloc]init];
+
+    arlonTableViewController * VC01 = [[arlonTableViewController alloc]init];
+    //设置navigationcontroller
+    UINavigationController *tableNav = [[UINavigationController alloc]initWithRootViewController:VC01];
+
+    tableNav.tabBarItem.title = @"TableView";
+    tableNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
+    tableNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
+    tableNav.view.backgroundColor = [UIColor whiteColor];
+    [tabbarVC addChildViewController:tableNav];
+
+    arlonCollectionViewController * VC02 = [[arlonCollectionViewController alloc]init];
+    VC02.tabBarItem.title = @"CollectionView";
+    VC02.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
+    VC02.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
+    VC02.view.backgroundColor = [UIColor greenColor];
+    [tabbarVC addChildViewController:VC02];
+
+    addItemViewController * VC03 = [[addItemViewController alloc]init];
+    VC03.tabBarItem.title = @"关注";
+    VC03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
+    VC03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
+    VC03.view.backgroundColor = [UIColor whiteColor];
+    [tabbarVC addChildViewController:VC03];
+
+    arlonLoginViewController * VC04 = [[arlonLoginViewController alloc]init];
+    VC04.tabBarItem.title = @"login";
+    VC04.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
+    VC04.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
+    VC04.view.backgroundColor = [UIColor whiteColor];
+    [tabbarVC addChildViewController:VC04];
+    
+
+    self.window.rootViewController = tabbarVC;
+    // 显示窗口
+    [self.window makeKeyAndVisible];
+    
+    return YES;
+}
+
+-(void)notificationHandler
+{
     UIDevice *device = [UIDevice currentDevice];
     [device beginGeneratingDeviceOrientationNotifications];
     NSNotificationCenter *nc = [NSNotificationCenter defaultCenter];
@@ -39,43 +90,7 @@
            selector:@selector(applicationEnterBackground:)
                name: UIApplicationDidEnterBackgroundNotification
              object:nil];
-    
-    // 设置窗口的跟控制器
-    UITabBarController * tabbarVC = [[UITabBarController alloc]init];
-    
-    arlonTableViewController * VC01 = [[arlonTableViewController alloc]init];
-    //设置navigationcontroller
-    UINavigationController *tableNav = [[UINavigationController alloc]initWithRootViewController:VC01];
-
-    tableNav.tabBarItem.title = @"TableView";
-    tableNav.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    tableNav.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    tableNav.view.backgroundColor = [UIColor whiteColor];
-    [tabbarVC addChildViewController:tableNav];
-    
-    arlonCollectionViewController * VC02 = [[arlonCollectionViewController alloc]init];
-    VC02.tabBarItem.title = @"CollectionView";
-    VC02.tabBarItem.image = [UIImage imageNamed:@"tabBar_new_icon"];
-    VC02.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_new_click_icon"];
-    VC02.view.backgroundColor = [UIColor greenColor];
-    [tabbarVC addChildViewController:VC02];
-    
-    addItemViewController * VC03 = [[addItemViewController alloc]init];
-    VC03.tabBarItem.title = @"关注";
-    VC03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
-    VC03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
-    
-    VC03.view.backgroundColor = [UIColor whiteColor];
-    [tabbarVC addChildViewController:VC03];
-    
-
-    self.window.rootViewController = tabbarVC;
-    // 显示窗口
-    [self.window makeKeyAndVisible];
-    
-    return YES;
 }
-
 
 - (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL*)url
 {
@@ -134,6 +149,10 @@
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
+
+
+
+#pragma mark - notification的响应
 -(void)orientationChanged:(NSNotification *)note
 {
     NSLog(@"屏幕旋转方向常量：%ld",[[note object]orientation]);
@@ -152,4 +171,31 @@
     NSLog(@"app启动或者app从后台进入前台");
 }
 
+
+#pragma mark - 将nslog的输出信息写入到dr.log文件中
+- (void)redirectNSlogToDocumentFolder
+{
+    // 如果已经连接Xcode调试则不输出到文件
+    if(isatty(STDOUT_FILENO))
+    {
+        return;
+    }
+    UIDevice *device = [UIDevice currentDevice];
+    if([[device model] hasSuffix:@"Simulator"])
+    {
+        //在模拟器不保存到文件中return;
+    }
+
+    NSArray *paths =NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES);
+    NSString *documentDirectory = [paths objectAtIndex:0];
+    NSString *fileName = [NSString stringWithFormat:@"arlonLogFile.log"];//注意不是NSData!
+    NSString *logFilePath = [documentDirectory stringByAppendingPathComponent:fileName];
+    //先删除已经存在的文件
+    NSFileManager *defaultManager = [NSFileManager defaultManager];
+    [defaultManager removeItemAtPath:logFilePath error:nil];
+    
+    // 将log输入到文件
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stdout);
+    freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stderr);
+}
 @end
