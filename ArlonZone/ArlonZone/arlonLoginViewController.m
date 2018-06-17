@@ -28,6 +28,7 @@
     [self addPwdInputLabel];
     [self addPwdameInputTextField];
     [self addLoginButton];
+    [self addRegisterButton];
 }
 
 
@@ -106,8 +107,6 @@
     // [mylabel release];
 }
 
-
-
 -(void)addLoginButton
 {
     UIButton *myButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
@@ -115,8 +114,24 @@
     [myButton setTitle:@"Login" forState:UIControlStateNormal];
     [myButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [myButton setBackgroundColor:[UIColor blueColor]];
-    [myButton setTitle:@"HighLight" forState:UIControlStateHighlighted];
+    //[myButton setTitle:@"HighLight" forState:UIControlStateHighlighted];
     [myButton addTarget:self action : @selector(buttonDown) forControlEvents : UIControlEventTouchDown];
+    //放开按钮时实现的方法
+    //[myButton addTarget:self action:@selector(buttonRelease:)forControlEvents:UIControlEventTouchUpInside];
+    //创建带有图片的按钮
+    //[myButton setImage:[UIImage imageNamed:@"123.png"]forState:UIControlStateNormal];
+    [self.view addSubview:myButton];
+}
+
+-(void)addRegisterButton
+{
+    UIButton *myButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [myButton setFrame:CGRectMake(125, 450,150,40)];
+    [myButton setTitle:@"Register" forState:UIControlStateNormal];
+    [myButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [myButton setBackgroundColor:[UIColor magentaColor]];
+    //[myButton setTitle:@"HighLight" forState:UIControlStateHighlighted];
+    [myButton addTarget:self action : @selector(registeUser) forControlEvents : UIControlEventTouchDown];
     //放开按钮时实现的方法
     //[myButton addTarget:self action:@selector(buttonRelease:)forControlEvents:UIControlEventTouchUpInside];
     //创建带有图片的按钮
@@ -129,14 +144,65 @@
 -(void)buttonDown
 {
     //NSLog(@"%@",NSHomeDirectory());
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserInfo"];
+    NSLog(@"%@", arr);
+    NSString *str = [arr componentsJoinedByString:@","];
+
     UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"登陆喽"
-                                                        message:@"ojbk?"
+                                                        message:str
                                                        delegate:nil
                                               cancelButtonTitle:@"OjbK!"
                                               otherButtonTitles:nil];
     [alertView show];
-    mainWindow *mainwindow = [[mainWindow alloc]init];
-    [self.navigationController pushViewController:mainwindow animated:YES];
+
+//    mainWindow *mainwindow = [[mainWindow alloc]init];
+//    [self.navigationController pushViewController:mainwindow animated:YES];
 }
+
+-(void)registeUser
+{    
+    NSString *userName = self.nameTextField.text;
+    NSString *pwd = self.pwdTextField.text;
+    if(userName.length > 0 && pwd.length > 0){
+        NSArray *arr = @[@[userName,pwd]];
+        [[NSUserDefaults standardUserDefaults] setObject:arr forKey:@"UserInfo"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"注册成功了喔"
+                                                            message:@"有本事你再登陆试试呢"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OjbK!"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+    else
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"不可以的喔"
+                                                            message:@"用户名和密码都不能为空的呢"
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"OjbK!"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+    }
+   // [self.view reload];
+   // [self.view reload]
+
+}
+
+#pragma mark - 备忘
+//保存数组到NSUserDefaults
+
+- (IBAction)saveUserDefults:(id)sender {
+    NSArray *arr = @[@[@"1",@"1"]];
+    [[NSUserDefaults standardUserDefaults] setObject:arr forKey:@"UserInfo"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+//取出保存在NSUserDefaults中的数组
+
+- (IBAction)userDefault:(id)sender {
+    NSArray *arr = [[NSUserDefaults standardUserDefaults] objectForKey:@"arr"];
+    NSLog(@"%@", arr);
+}
+
 
 @end
