@@ -38,9 +38,12 @@
 {
     
     self.textField = [[UITextField alloc]initWithFrame:
-                      CGRectMake(50, 300, 200, 50)];
+                      CGRectMake(50, 200, 300, 50)];
     self.textField.borderStyle = UITextBorderStyleRoundedRect;
     self.textField.backgroundColor = [UIColor grayColor];
+    self.textField.placeholder = @"输入要添加的事件";
+    
+
     [self.view addSubview:self.textField];
     //设置显示文本
     self.textField.text = @"";
@@ -53,12 +56,12 @@
 - (void)addLabel
 {
     //创建一个标签，并设置位置
-    CGRect fram=CGRectMake(50,250,100,50);
+    CGRect fram=CGRectMake(50,150,100,50);
     UILabel *mylabel=[[UILabel alloc]initWithFrame:fram];
     //设置标签背景颜色为透明色
     mylabel.backgroundColor=[UIColor clearColor];
     //设置标签内容和字体颜色
-    mylabel.text=@"input:";
+    mylabel.text=@"在此输入";
     mylabel.textColor=[UIColor redColor];
     
     //显示行数
@@ -75,7 +78,7 @@
 {
     UIButton *myButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
     [myButton setFrame:CGRectMake(50, 600,200,30)];
-    [myButton setTitle:@"沙箱路径" forState:UIControlStateNormal];
+    [myButton setTitle:@"设置字体" forState:UIControlStateNormal];
     [myButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [myButton setBackgroundColor:[UIColor blueColor]];
     [myButton setTitle:@"HighLight" forState:UIControlStateHighlighted];
@@ -91,13 +94,15 @@
 #pragma mark - selector
 -(void)buttonDown
 {
-    NSLog(@"%@",NSHomeDirectory());
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"沙箱路径"
-                                                        message:NSHomeDirectory()
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OjbK"
-                                              otherButtonTitles:nil];
-    [alertView show];
+//    NSLog(@"%@",NSHomeDirectory());
+//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"沙箱路径"
+//                                                        message:NSHomeDirectory()
+//                                                       delegate:nil
+//                                              cancelButtonTitle:@"OjbK"
+//                                              otherButtonTitles:nil];
+//    [alertView show];
+    settingsViewController *settingVC = [[settingsViewController alloc]init];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 -(void)saveAddedItem

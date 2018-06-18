@@ -34,9 +34,10 @@
 //更改图片
 -(void)setCellImage:(NSString*)ImgName
 {
+    NSString *urlString=@"http://res.tu.qq.com/weishi/materials/video_huangzitaomanhua_iOS.png?v=0?t=webp";
     arlonDownload *downloadImage = [[arlonDownload alloc] init];
     
-    [self.myImgView setImage:[UIImage imageWithData:[downloadImage downloadData]]];
+    [self.myImgView setImage:[UIImage imageWithData:[downloadImage downloadData:urlString]]];
 }
 
 //更改文字

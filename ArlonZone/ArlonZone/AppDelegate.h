@@ -11,6 +11,7 @@
 #import "arlonTableViewController.h"
 #import "addItemViewController.h"
 #import "arlonLoginViewController.h"
+#import "settingsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

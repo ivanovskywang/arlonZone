@@ -10,6 +10,6 @@
 
 @interface arlonDownload:NSObject
 
-- (NSData *)downloadData;
+- (NSData *)downloadData:(NSString *)urlString;
 @end
 

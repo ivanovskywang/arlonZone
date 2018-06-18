@@ -41,6 +41,7 @@
                       CGRectMake(150, 200, 200, 50)];
     self.nameTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.nameTextField.backgroundColor = [UIColor grayColor];
+    self.pwdTextField.placeholder = @"输入用户名";
     [self.view addSubview:self.nameTextField];
     //设置显示文本
     self.nameTextField.text = @"";
@@ -56,6 +57,7 @@
                           CGRectMake(150, 300, 200, 50)];
     self.pwdTextField.borderStyle = UITextBorderStyleRoundedRect;
     self.pwdTextField.backgroundColor = [UIColor grayColor];
+    self.pwdTextField.placeholder = @"输入密码";
     [self.view addSubview:self.pwdTextField];
     //设置显示文本
     self.pwdTextField.text = @"";

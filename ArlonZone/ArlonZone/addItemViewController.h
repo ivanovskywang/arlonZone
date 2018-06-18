@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "arlonTableItem.h"
 #import "arlonTableViewController.h"
+#import "settingsViewController.h"
 
 @interface addItemViewController : UIViewController
 

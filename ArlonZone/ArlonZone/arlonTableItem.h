@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface arlonTableItem:NSObject
 
-@property NSString *itemName;
-@property BOOL checked;
+@interface arlonTableItem:NSObject<NSCoding>
+
+
+@property (nonatomic, copy) NSString *itemName;
+@property (nonatomic) BOOL checked;
 @property NSDate *checkedDate;
 -(void)markAschecked:(BOOL) isChecked;
 
 @end
+
+

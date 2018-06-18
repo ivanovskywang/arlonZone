@@ -11,9 +11,9 @@
 @implementation arlonDownload
 
 // 下载数据
-- (NSData *)downloadData
+- (NSData *)downloadData:(NSString *)urlString
 {
-    NSString *urlString=@"http://res.tu.qq.com/weishi/materials/video_huangzitaomanhua_iOS.png?v=0?t=webp";
+    //NSString *urlString=@"http://res.tu.qq.com/weishi/materials/video_huangzitaomanhua_iOS.png?v=0?t=webp";
     [urlString stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]];
     NSURL *url=[NSURL URLWithString:urlString];
     NSData *imageData=[NSData dataWithContentsOfURL:url];

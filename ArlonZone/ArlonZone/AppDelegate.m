@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 
 @interface AppDelegate ()
+@property(nonatomic) NSInteger applicationIconBadgeNumber;
 
 @end
 
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    UIApplication *app = [UIApplication sharedApplication];
+//    app.applicationIconBadgeNumber = 999;
+    [self writeInfo2PlistFile];
     [self notificationHandler];
     
     [self redirectNSlogToDocumentFolder];
@@ -44,7 +48,7 @@
     VC02.view.backgroundColor = [UIColor greenColor];
     [tabbarVC addChildViewController:VC02];
 
-    addItemViewController * VC03 = [[addItemViewController alloc]init];
+    settingsViewController * VC03 = [[settingsViewController alloc]init];
     VC03.tabBarItem.title = @"关注";
     VC03.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
     VC03.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
@@ -197,5 +201,23 @@
     // 将log输入到文件
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stdout);
     freopen([logFilePath cStringUsingEncoding:NSASCIIStringEncoding],"a+", stderr);
+}
+
+#pragma mark - 将信息写入plist文件
+-(void)writeInfo2PlistFile
+{
+    // 获取到Caches文件夹路径
+    NSString *cachePath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    
+    // 拼接文件名
+    NSString *filePath = [cachePath stringByAppendingPathComponent:@"tableVCinitData.plist"];
+    // 将数据封装成字典
+    NSMutableArray *infoArray = [[NSMutableArray alloc]init];
+    NSString *tableData1 = @"english";
+    [infoArray addObject:@"中文"];
+    [infoArray addObject:@"😄"];
+    [infoArray addObject:tableData1];
+    // 将字典持久化到沙盒文件中
+    [infoArray writeToFile:filePath atomically:YES];
 }
 @end
