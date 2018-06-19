@@ -133,7 +133,11 @@
     // 拼接图片名为"currentImage"的路径
     NSString *imageFilePath = [path stringByAppendingPathComponent:@"currentImage"];
     //其中参数0.5表示压缩比例，1表示不压缩，数值越小压缩比例越大
-    [UIImageJPEGRepresentation(currentImage, 0.9) writeToFile:imageFilePath  atomically:YES];
+    bool success = [UIImageJPEGRepresentation(currentImage, 0.9) writeToFile:imageFilePath  atomically:YES];
+    if(success)
+    {
+        NSLog(@"图片保存本地成功");
+    }
     
     
    

@@ -40,7 +40,7 @@
     self.textField = [[UITextField alloc]initWithFrame:
                       CGRectMake(50, 200, 300, 50)];
     self.textField.borderStyle = UITextBorderStyleRoundedRect;
-    self.textField.backgroundColor = [UIColor grayColor];
+    self.textField.backgroundColor = [UIColor whiteColor];
     self.textField.placeholder = @"输入要添加的事件";
     
 
