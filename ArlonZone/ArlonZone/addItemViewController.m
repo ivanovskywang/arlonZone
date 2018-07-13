@@ -27,6 +27,7 @@
     [self addinputTextField];
     [self addLabel];
     [self addArlonButton];
+    [self addBlockCycleButton];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -90,6 +91,22 @@
     [self.view addSubview:myButton];
 }
 
+-(void)addBlockCycleButton
+{
+    UIButton *myButton=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [myButton setFrame:CGRectMake(50, 400,200,30)];
+    [myButton setTitle:@"BlockRetainCycle" forState:UIControlStateNormal];
+    [myButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [myButton setBackgroundColor:[UIColor blueColor]];
+    [myButton setTitle:@"HighLight" forState:UIControlStateHighlighted];
+    [myButton addTarget:self action : @selector(retainCycleButtonDown) forControlEvents : UIControlEventTouchDown];
+    //放开按钮时实现的方法
+    //[myButton addTarget:self action:@selector(buttonRelease:)forControlEvents:UIControlEventTouchUpInside];
+    //创建带有图片的按钮
+    //[myButton setImage:[UIImage imageNamed:@"123.png"]forState:UIControlStateNormal];
+    [self.view addSubview:myButton];
+}
+
 
 #pragma mark - selector
 -(void)buttonDown
@@ -103,6 +120,19 @@
 //    [alertView show];
     settingsViewController *settingVC = [[settingsViewController alloc]init];
     [self.navigationController pushViewController:settingVC animated:YES];
+}
+
+-(void)retainCycleButtonDown
+{
+    //    NSLog(@"%@",NSHomeDirectory());
+    //    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"沙箱路径"
+    //                                                        message:NSHomeDirectory()
+    //                                                       delegate:nil
+    //                                              cancelButtonTitle:@"OjbK"
+    //                                              otherButtonTitles:nil];
+    //    [alertView show];
+    arlonBlockController *retainBlockVC = [[arlonBlockController alloc]init];
+    [self.navigationController pushViewController:retainBlockVC animated:YES];
 }
 
 -(void)saveAddedItem

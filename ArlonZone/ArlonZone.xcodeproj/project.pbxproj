@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D2E84B620F7479E00CC8E70 /* arlonBlockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E84B520F7479E00CC8E70 /* arlonBlockController.m */; };
+		9D3C168420E243AD00E83680 /* arlonHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D3C168320E243AD00E83680 /* arlonHook.m */; };
 		9D44891B20D64D260014224F /* arlonLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44891A20D64D260014224F /* arlonLoginViewController.m */; };
 		9D44891E20D653480014224F /* mainWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44891D20D653480014224F /* mainWindow.m */; };
 		9D44892120D769DB0014224F /* settingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D44892020D769DB0014224F /* settingsViewController.m */; };
@@ -44,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9D2E84B420F7479E00CC8E70 /* arlonBlockController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonBlockController.h; sourceTree = "<group>"; };
+		9D2E84B520F7479E00CC8E70 /* arlonBlockController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonBlockController.m; sourceTree = "<group>"; };
+		9D3C168220E243AD00E83680 /* arlonHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonHook.h; sourceTree = "<group>"; };
+		9D3C168320E243AD00E83680 /* arlonHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonHook.m; sourceTree = "<group>"; };
 		9D44891920D64D260014224F /* arlonLoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arlonLoginViewController.h; sourceTree = "<group>"; };
 		9D44891A20D64D260014224F /* arlonLoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = arlonLoginViewController.m; sourceTree = "<group>"; };
 		9D44891C20D653480014224F /* mainWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = mainWindow.h; sourceTree = "<group>"; };
@@ -130,6 +136,10 @@
 			children = (
 				9D9E52B120D36A560078A1A8 /* AppDelegate.h */,
 				9D9E52B220D36A560078A1A8 /* AppDelegate.m */,
+				9D2E84B420F7479E00CC8E70 /* arlonBlockController.h */,
+				9D2E84B520F7479E00CC8E70 /* arlonBlockController.m */,
+				9D3C168220E243AD00E83680 /* arlonHook.h */,
+				9D3C168320E243AD00E83680 /* arlonHook.m */,
 				9D9E52EC20D36FAC0078A1A8 /* arlonTableViewController.h */,
 				9D9E52ED20D36FAC0078A1A8 /* arlonTableViewController.m */,
 				9D44891F20D769DB0014224F /* settingsViewController.h */,
@@ -312,9 +322,11 @@
 				9D9E52E820D36CA60078A1A8 /* arlonCollectionCell.m in Sources */,
 				9D9E52F420D3719C0078A1A8 /* arlonTableItem.m in Sources */,
 				9D9E52EB20D36D1B0078A1A8 /* arlonDownload.m in Sources */,
+				9D2E84B620F7479E00CC8E70 /* arlonBlockController.m in Sources */,
 				9D9E52E520D36C310078A1A8 /* arlonCollectionViewController.m in Sources */,
 				9D9E52C120D36A570078A1A8 /* main.m in Sources */,
 				9D44891B20D64D260014224F /* arlonLoginViewController.m in Sources */,
+				9D3C168420E243AD00E83680 /* arlonHook.m in Sources */,
 				9D9E52F720D39FC20078A1A8 /* addItemViewController.m in Sources */,
 				9D9E52EE20D36FAC0078A1A8 /* arlonTableViewController.m in Sources */,
 				9D9E52B320D36A560078A1A8 /* AppDelegate.m in Sources */,

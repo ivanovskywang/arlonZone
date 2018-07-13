@@ -10,6 +10,7 @@
 #import "arlonTableItem.h"
 #import "arlonTableViewController.h"
 #import "settingsViewController.h"
+#import "arlonBlockController.h"
 
 @interface addItemViewController : UIViewController
 

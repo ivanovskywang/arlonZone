@@ -62,6 +62,13 @@
     VC04.view.backgroundColor = [UIColor whiteColor];
     [tabbarVC addChildViewController:VC04];
     
+    arlonBlockController * VC05 = [[arlonBlockController alloc]init];
+    VC05.tabBarItem.title = @"Block";
+    VC05.tabBarItem.image = [UIImage imageNamed:@"tabBar_friendTrends_icon"];
+    VC05.tabBarItem.selectedImage = [UIImage imageNamed:@"tabBar_friendTrends_click_icon"];
+    VC05.view.backgroundColor = [UIColor whiteColor];
+    [tabbarVC addChildViewController:VC05];
+    
 
     self.window.rootViewController = tabbarVC;
     // 显示窗口
